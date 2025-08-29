@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Christmas from Jindol</title>
+
+  <link rel="stylesheet" href="./christmas.css" />
+</head>
+<body>
+  <div class="container">
+    <canvas id="tree-canvas"></canvas>
+  </div>
+
+  <div class="title">
+    Woof!! I'm Jindol and I wish you click here to create my Christmas Treeeeee!
+  </div>
+
+  <!-- es-module-shims는 importmap보다 먼저 로드 -->
+  <script src="https://unpkg.com/es-module-shims@1.6.3/dist/es-module-shims.js"></script>
+
+  <!-- import map: three / addons 경로 매핑 -->
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://unpkg.com/three@0.164.0/build/three.module.js",
+      "three/addons/": "https://unpkg.com/three@0.164.0/examples/jsm/"
+    }
+  }
+  </script>
+
+  <!-- 앱 스크립트: ES Module -->
+  <script type="module" src="./three.js"></script>
+</body>
+</html>
